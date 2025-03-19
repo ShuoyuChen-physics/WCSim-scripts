@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source setup_env.sh
+INDEXNUMBER=$1
+cd $WORKSPACE_PATH 
+TEMP_MAC="e_500_temp_${1}.mac"
+TEMP_SCRIPT="wcsim_submit_temp_${1}.sh"
+cp $WORKSPACE_PATH/tempscript/e_500_temp.mac $WORKSPACE_PATH/$TEMP_MAC
+cp $WORKSPACE_PATH/tempscript/wcsim_submit_temp.sh $WORKSPACE_PATH/$TEMP_SCRIPT
+sed -i "s|{{INDEXNUMBER}}|$INDEXNUMBER|g" $WORKSPACE_PATH/$TEMP_MAC
+sed -i "s|{{INDEXNUMBER}}|$INDEXNUMBER|g" $WORKSPACE_PATH/$TEMP_SCRIPT
+
+
+pjsub -N wcs_${INDEXNUMBER} $WORKSPACE_PATH/$TEMP_SCRIPT
+
+rm $WORKSPACE_PATH/$TEMP_SCRIPT
+
+unset INDEXNUMBER
+unset TEMP_MAC
+unset TEMP_SCRIPT
+
