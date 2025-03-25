@@ -1,18 +1,10 @@
-'''
-Author: Shuoyu Chen shuoyuchen.physics@gmail.com
-Date: 2025-03-19 16:06:10
-LastEditors: Shuoyu Chen shuoyuchen.physics@gmail.com
-LastEditTime: 2025-03-19 16:06:11
-FilePath: /schen/workspace/HKFDML/WCSim-scripts/gen_split.py
-Description: 
-'''
 import h5py as h5
 import numpy as np
 
 infile = '/disk03/usr8/schen/workspace/HKFDML/MCstorage/testdataset/e_0_range2gev_5_test.h5'
 
-train_ratio = 0
-val_ratio = 0
+train_ratio = 0.8
+val_ratio = 0.1
 test_ratio = 1 - train_ratio - val_ratio
 
 

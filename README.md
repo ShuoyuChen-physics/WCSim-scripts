@@ -2,7 +2,7 @@
  * @Author: Shuoyu Chen shuoyuchen.physics@gmail.com
  * @Date: 2025-03-19 16:21:08
  * @LastEditors: Shuoyu Chen shuoyuchen.physics@gmail.com
- * @LastEditTime: 2025-03-19 17:08:55
+ * @LastEditTime: 2025-03-24 16:28:36
  * @FilePath: /schen/workspace/HKFDML/WCSim-scripts/README.md
  * @Description: 
 -->
@@ -53,7 +53,7 @@ Merge individual h5 files into a single npz file:
 ./merge_h5.py /your/h5/file1 /your/h5/file2 /your/h5/file3 ... -o /your/output/path
 
 Assigning labels to identify their train/validation/test splits.
-./gen_split
+./gen_split.py
 (modify Line 12)
 
 Then you can have h5 files and npz files, which can be used for WatChMaL.
