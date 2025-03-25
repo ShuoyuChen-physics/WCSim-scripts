@@ -2,7 +2,7 @@
  * @Author: Shuoyu Chen shuoyuchen.physics@gmail.com
  * @Date: 2025-03-19 16:21:08
  * @LastEditors: Shuoyu Chen shuoyuchen.physics@gmail.com
- * @LastEditTime: 2025-03-24 16:28:36
+ * @LastEditTime: 2025-03-25 11:05:04
  * @FilePath: /schen/workspace/HKFDML/WCSim-scripts/README.md
  * @Description: 
 -->
@@ -57,4 +57,18 @@ Assigning labels to identify their train/validation/test splits.
 (modify Line 12)
 
 Then you can have h5 files and npz files, which can be used for WatChMaL.
+
+
+
+
+### Others:
+
+./sub_fitqun_masspro.sh used for submitting jobs to sukap nodes to run fiTQun.
+
+./sub_ana_npz_fitqun_masspro.sh used for extracting the reconstruction result from the fiTQun result root file and write the result into a npz file which is easier for the later analysis.
+
+
+
+
+
 
